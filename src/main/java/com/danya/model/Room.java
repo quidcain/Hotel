@@ -4,10 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Room {
+    private long id;
     private Size size;
     private boolean seaViewable;
     private boolean freeMinibar;
-    private String description;
+    private String enDescription;
+    private String ruDescription;
 
     public enum Size {
         SMALL, MEDIUM, LARGE;
@@ -21,6 +23,14 @@ public class Room {
         public static Size valueOf(int n) {
            return map.get(n);
         }
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public Size getSize() {
@@ -47,11 +57,19 @@ public class Room {
         this.freeMinibar = freeMinibar;
     }
 
-    public String getDescription() {
-        return description;
+    public String getEnDescription() {
+        return enDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setEnDescription(String enDescription) {
+        this.enDescription = enDescription;
+    }
+
+    public String getRuDescription() {
+        return ruDescription;
+    }
+
+    public void setRuDescription(String ruDescription) {
+        this.ruDescription = ruDescription;
     }
 }

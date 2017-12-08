@@ -1,12 +1,19 @@
 package com.danya.model;
 
-import java.util.List;
 
 public class User {
+    private long id;
     private String name;
     private String password;
-    private List<Room> rooms;
     private boolean admin;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -22,14 +29,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public List<Room> getRooms() {
-        return rooms;
-    }
-
-    public void setRooms(List<Room> rooms) {
-        this.rooms = rooms;
     }
 
     public boolean isAdmin() {
